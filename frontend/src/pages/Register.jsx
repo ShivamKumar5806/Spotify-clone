@@ -32,7 +32,7 @@ function Register() {
             
             setLoading(true);
             
-            const res = await api.post("/api/auth/register", formData);
+            const res = await api.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, formData);
             console.log(res.data);
 
             alert(res.data.message || "Registration Successful");

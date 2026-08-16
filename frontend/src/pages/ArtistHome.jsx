@@ -30,7 +30,7 @@ function ArtistHome() {
             formData.append("file", file);
 
             const res = await api.post(
-                "/api/music/create",
+                `${import.meta.env.VITE_API_URL}/api/music/create`,
                 formData
             );
 

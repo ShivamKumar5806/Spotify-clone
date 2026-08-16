@@ -31,7 +31,7 @@ function Login() {
 
             setLoading(true);
 
-            const res = await api.post("/api/auth/login", formData);
+            const res = await api.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, formData);
 
             alert(res.data.message || "Login Successful");
 

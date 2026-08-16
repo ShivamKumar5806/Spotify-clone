@@ -19,7 +19,7 @@ function UserHome() {
 
         try {
 
-            const res = await api.get("/api/music/all");
+            const res = await api.get(`${import.meta.env.VITE_API_URL}/api/music/all`);
 
             setSongs(res.data.musics);
 
